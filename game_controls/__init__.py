@@ -2,10 +2,12 @@
 #
 # SPDX-License-Identifier: MIT
 """
-`gamecontrols`
+`game_controls`
 ================================================================================
 
-An abstraction layer for CircuitPython to access commonly used video game control inputs in a consistent manner across different hardware devices and configurations.
+An abstraction layer for CircuitPython to access commonly used
+video game control inputs in a consistent manner across different
+hardware devices and configurations.
 
 
 * Author(s): Tim C

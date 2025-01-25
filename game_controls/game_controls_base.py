@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025 Tim C
+#
+# SPDX-License-Identifier: MIT
+
+__version__ = "0.0.0+auto.0"
+__repo__ = "https://github.com/foamyguy/CircuitPython_GameControls.git"
+
 try:
     from typing import Union
 except ImportError:
@@ -7,7 +14,6 @@ from keypad import Keys, ShiftRegisterKeys
 
 
 class GameControlsBase:
-
     def __init__(self):
         pass
 
@@ -54,18 +60,17 @@ class KeyStates:
         return self._pressed[key_number]
 
 
-class ControlsDictionary():
+class ControlsDictionary:
     _VALID_BTNS = ("a", "b", "x", "y", "up", "down", "left", "right", "start", "select")
 
-    def __init__(self, initial_dict = None):
+    def __init__(self, initial_dict=None):
         if initial_dict is not None:
             self._store = initial_dict
         else:
             self._store = {}
 
     def __getitem__(self, field):
-
-        #print(self._store.keys())
+        # print(self._store.keys())
         if field not in self._store.keys():
             if field in self._VALID_BTNS:
                 print(f"This device does not have a {field} button.")

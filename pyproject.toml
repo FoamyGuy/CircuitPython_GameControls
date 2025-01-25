@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2022 Alec Delaney, written for Adafruit Industries
+# SPDX-FileCopyrightText: Copyright (c) 2025 Tim C
+#
+# SPDX-License-Identifier: MIT
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "setuptools-scm",
+]
+
+[project]
+name = "circuitpython-gamecontrols"
+description = "An abstraction layer for CircuitPython to access commonly used video game control inputs in a consistent manner across different hardware devices and configurations."
+version = "0.0.0+auto.0"
+readme = "README.rst"
+authors = [
+    {name = "Tim C", email = "foamyguy@gmail.com"}
+]
+urls = {Homepage = "https://github.com/foamyguy/CircuitPython_GameControls"}
+keywords = [
+    "adafruit",
+    "blinka",
+    "circuitpython",
+    "micropython",
+    "gamecontrols",
+    "game",
+    "games",
+    "controller",
+    "game-controller",
+    "konami",
+    "videogame",
+    "gameboy",
+    "game&watch",
+]
+license = {text = "MIT"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Hardware",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+# TODO: IF LIBRARY FILES ARE A PACKAGE FOLDER,
+#       CHANGE `py_modules = ['...']` TO `packages = ['...']`
+packages = ["game_controls"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {optional = {file = ["optional_requirements.txt"]}}
