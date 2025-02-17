@@ -1,8 +1,11 @@
 # SPDX-FileCopyrightText: Copyright (c) 2025 Tim C
 #
 # SPDX-License-Identifier: Unlicense
-from game_controls import game_controls
 
+
+from game_controls.usb_hid_controller import USBHIDControls
+
+game_controls = USBHIDControls()
 while True:
     cur_state = game_controls.button_state
     if cur_state["a"]:
@@ -10,6 +13,12 @@ while True:
 
     if cur_state["b"]:
         print("B btn!")
+
+    if cur_state["x"]:
+        print("X btn!")
+
+    if cur_state["y"]:
+        print("Y btn!")
 
     if cur_state["start"]:
         print("START btn!")

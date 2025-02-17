@@ -60,7 +60,7 @@ class PybadgeGameControls(GameControlsBase):
         self._pressed_dict["right"] = self._buttons.was_pressed(_BTN_RIGHT)
 
     @property
-    def button(self) -> Dict:
+    def button_state(self) -> Dict:
         """
         The current state of all the buttons.
 

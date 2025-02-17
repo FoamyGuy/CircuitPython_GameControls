@@ -68,7 +68,7 @@ class PyGamerGameControls(GameControlsBase):
         self._pressed_dict["right"] = x > 50000
 
     @property
-    def button(self) -> Dict:
+    def button_state(self) -> Dict:
         """
         The current state of all the buttons.
 
